@@ -6,21 +6,31 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          plugins: ['transform-runtime'],
-          presets: ['es2015', 'stage-0', 'react'],
+        {
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+              plugins: ['transform-runtime'],
+              presets: ['es2015', 'stage-0', 'react'],
+            }
+        },
+        {
+            test: /\.css$/,
+            loader: 'style-loader'
+        },
+        {
+            test: /\.css$/,
+            loader: 'css-loader',
+            query: {
+              modules: true,
+              localIdentName: '[name]__[local]__[hash:base64:5]'
+            }
         }
-      },
-      {
-        test: /.css$/, loader: 'style-loader!css-loader'
-      }
     ]
   }
 }
+
 
 // module.exports = {
 // 	entry: './js/svgBarGraph.js',
