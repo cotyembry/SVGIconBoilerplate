@@ -1,6 +1,3 @@
-setup the following alias (and make sure perl is in your PATH variable)
-also make sure that you have included the webpackInit.pl file in the
-correct path or change the path to the location you have the file saved
+This project will be used as a quick way for me to start creating a svg icon from scratch
 
-
-`alias webpackinit='perl ~/Developer/CustomScripts/webpackInit.pl'`
+1st use case:	create an iOS app icon that will be used in fastlane
